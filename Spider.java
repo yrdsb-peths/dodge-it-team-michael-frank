@@ -5,14 +5,13 @@ public class Spider extends Actor
     
     public void act()
     {
-         move(-10);
+         move(-100);
         
         if(getX() <= 0) {
             resetSpider();
         }
         
         if (isTouching(Hero.class)){
-            // Add a gameover symbol
             Skeleton skeleton = new Skeleton();
             getWorld().addObject(skeleton, 300, 200);
             getWorld().removeObject(this);
