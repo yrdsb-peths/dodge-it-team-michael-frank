@@ -5,7 +5,7 @@ public class Spider extends Actor
     
     public void act()
     {
-         move(-100);
+         move(-15);
         
         if(getX() <= 0) {
             resetSpider();

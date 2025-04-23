@@ -1,29 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Hero here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Hero extends Actor
 {
-    /**
-     * Act - do whatever the Hero wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() {
-    if (Greenfoot.isKeyDown("left")) {
-        setLocation(getX() - 5, getY());
+    boolean atTop = true;
+    public void act()
+    {
+        if(Greenfoot.mouseClicked(null)){
+            atTop = !atTop;
+        }
+        
+        if(atTop) {
+            setLocation(100, 100);
+        } else {
+            setLocation(100, 300);
+        }
     }
-    if (Greenfoot.isKeyDown("right")) {
-        setLocation(getX() + 5, getY());
-    }
-    if (Greenfoot.isKeyDown("up")) {
-        setLocation(getX(), getY() - 5);
-    }
-    if (Greenfoot.isKeyDown("down")) {
-        setLocation(getX(), getY() + 5);
-    }
-}
 }
